@@ -1,7 +1,6 @@
-import React from 'react';
-
 import { Info } from './Info';
-import { Empty } from './Empty';
+// import { Empty } from './Empty';
+import { List } from './List';
 
 import styles from './Tasks.module.css';
 
@@ -10,7 +9,9 @@ export const Tasks = () => {
     <section className={styles.tasks}>
       <Info />
 
-      <Empty />
+      {/* <Empty /> */}
+
+      <List />
     </section>
   );
 };
