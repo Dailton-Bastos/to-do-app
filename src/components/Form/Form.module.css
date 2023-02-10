@@ -14,7 +14,7 @@
 }
 
 .formLabel:hover {
-  box-shadow: 0 0 0 2px var(--purple-100);
+  box-shadow: 0 0 0 2px var(--gray-500);
 }
 
 .formLabel input {
@@ -26,6 +26,11 @@
   padding: 0 1.6rem;
   height: 54px;
   width: 100%;
+}
+
+.formLabel input:focus {
+  box-shadow: 0 0 0 2px var(--purple-900);
+  color: var(--gray-100);
 }
 
 .formButton {
