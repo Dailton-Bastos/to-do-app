@@ -1,0 +1,51 @@
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: -28px auto 0;
+  max-width: 73.6rem;
+  width: 100%;
+}
+
+.formLabel {
+  flex: 1;
+  border-radius: 8px;
+  transition: 0.2s hover;
+}
+
+.formLabel:hover {
+  box-shadow: 0 0 0 2px var(--purple-100);
+}
+
+.formLabel input {
+  border-radius: 8px;
+  border: none;
+  background: var(--gray-500);
+  color: var(--gray-300);
+  font-size: 1.6rem;
+  padding: 0 1.6rem;
+  height: 54px;
+  width: 100%;
+}
+
+.formButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--blue-900);
+  font-size: 1.4rem;
+  color: var(--gray-100);
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 54px;
+  width: 90px;
+  transition: 0.1s background;
+}
+
+.formButton:hover {
+  background: var(--blue-100);
+}
