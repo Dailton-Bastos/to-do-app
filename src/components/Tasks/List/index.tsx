@@ -26,6 +26,15 @@ export const List = ({ tasks = [], setTasks }: ListProps) => {
     [tasks, setTasks]
   );
 
+  const onDeleteTask = React.useCallback(
+    (id: string) => {
+      const filteredTasks = tasks?.filter((task) => task?.id !== id);
+
+      setTasks(filteredTasks);
+    },
+    [tasks, setTasks]
+  );
+
   return (
     <ul className={styles.list}>
       {tasks?.map((task) => (
@@ -50,7 +59,10 @@ export const List = ({ tasks = [], setTasks }: ListProps) => {
             <p>{task?.title}</p>
           </div>
 
-          <button className={styles.listItemContentButtonDelete}>
+          <button
+            className={styles.listItemContentButtonDelete}
+            onClick={() => onDeleteTask(task?.id)}
+          >
             <IconTrash />
           </button>
         </li>
