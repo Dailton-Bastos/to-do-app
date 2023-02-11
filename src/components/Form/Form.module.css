@@ -1,3 +1,15 @@
+@keyframes shake {
+  25% { 
+    transform: translateX(4px);
+  }
+  50% { 
+    transform: translateX(-4px);
+  }
+  75% { 
+    transform: translateX(4px);
+  }
+}
+
 .form {
   display: flex;
   align-items: center;
@@ -7,10 +19,21 @@
   width: 100%;
 }
 
+.formErrorMessage {
+  display: block;
+  font-size: 1.4rem;
+  color: var(--red-100);
+  margin-top: 1rem;
+}
+
 .formLabel {
   flex: 1;
   border-radius: 8px;
   transition: 0.2s hover;
+}
+
+.formLabel.formLabelError {
+  animation: shake 300ms;
 }
 
 .formLabel:hover {
