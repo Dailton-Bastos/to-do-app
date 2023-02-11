@@ -8,7 +8,7 @@ import type { TasksProps } from '../../types';
 
 import styles from './Tasks.module.css';
 
-export const Tasks = ({ tasks }: TasksProps) => {
+export const Tasks = ({ tasks, setTasks }: TasksProps) => {
   const totalCounter = React.useMemo(() => {
     return tasks?.length;
   }, [tasks]);
@@ -27,7 +27,7 @@ export const Tasks = ({ tasks }: TasksProps) => {
 
       {/* <Empty /> */}
 
-      <List tasks={tasks} />
+      <List tasks={tasks} setTasks={setTasks} />
     </section>
   );
 };

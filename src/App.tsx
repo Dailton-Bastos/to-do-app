@@ -39,7 +39,7 @@ export const App = () => {
           submitForm={onSubmitForm}
         />
 
-        <Tasks tasks={tasks} />
+        <Tasks tasks={tasks} setTasks={setTasks} />
       </main>
     </>
   );

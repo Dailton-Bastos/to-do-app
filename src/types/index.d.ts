@@ -1,5 +1,3 @@
-import React from 'react';
-
 export interface Task {
   id: string;
   title: string;
@@ -14,10 +12,12 @@ export interface FormProps {
 
 export interface TasksProps {
   tasks: Task[];
+  setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
 }
 
 export interface ListProps {
   tasks: Task[];
+  setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
 }
 
 export interface InfoProps {
