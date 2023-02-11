@@ -1,17 +1,36 @@
+import React from 'react';
+
+import { uuid } from '../../utils/helpers';
 import type { FormProps } from '../../types';
 
 import styles from './Form.module.css';
 
-export const Form = ({ value, changeValue, submitForm }: FormProps) => {
+export const Form = ({ setTasks }: FormProps) => {
+  const [taskTitle, setTaskTitle] = React.useState('');
+
+  const onSubmitForm = React.useCallback(
+    (e: React.FormEvent) => {
+      e.preventDefault();
+
+      setTasks((prev) => [
+        { id: uuid(), title: taskTitle.trim(), isFinished: false },
+        ...prev,
+      ]);
+
+      setTaskTitle('');
+    },
+    [taskTitle]
+  );
+
   return (
-    <form onSubmit={submitForm} className={styles.form}>
+    <form onSubmit={onSubmitForm} className={styles.form}>
       <label className={styles.formLabel} htmlFor="input">
         <input
           type="text"
           id="input"
-          value={value}
+          value={taskTitle}
           placeholder="Adicione uma nova tarefa"
-          onChange={(e) => changeValue(e.target.value)}
+          onChange={(e) => setTaskTitle(e.target.value)}
         />
       </label>
 

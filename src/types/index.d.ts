@@ -5,9 +5,7 @@ export interface Task {
 }
 
 export interface FormProps {
-  submitForm: (e: React.FormEvent) => void;
-  changeValue: React.Dispatch<React.SetStateAction<string>>;
-  value: string;
+  setTasks: React.Dispatch<React.SetStateAction<Task[]>>;
 }
 
 export interface TasksProps {
