@@ -1,12 +1,18 @@
-import React from 'react';
+import type { FormProps } from '../../types';
 
 import styles from './Form.module.css';
 
-export const Form = () => {
+export const Form = ({ value, changeValue, submitForm }: FormProps) => {
   return (
-    <form className={styles.form}>
+    <form onSubmit={submitForm} className={styles.form}>
       <label className={styles.formLabel} htmlFor="input">
-        <input type="text" id="input" placeholder="Adicione uma nova tarefa" />
+        <input
+          type="text"
+          id="input"
+          value={value}
+          placeholder="Adicione uma nova tarefa"
+          onChange={(e) => changeValue(e.target.value)}
+        />
       </label>
 
       <button className={styles.formButton} type="submit">
