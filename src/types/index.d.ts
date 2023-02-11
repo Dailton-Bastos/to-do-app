@@ -19,3 +19,8 @@ export interface TasksProps {
 export interface ListProps {
   tasks: Task[];
 }
+
+export interface InfoProps {
+  totalCounter: number;
+  totalDone: number;
+}
