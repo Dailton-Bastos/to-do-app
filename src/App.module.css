@@ -2,3 +2,9 @@
   margin: 0 auto;
   max-width: 73.6rem;
 }
+
+@media screen and (max-width: 768px) {
+  .app {
+    padding: 0 1.5rem;
+  }
+}

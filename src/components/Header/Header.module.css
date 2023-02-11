@@ -5,3 +5,9 @@
   background: var(--gray-700);
   padding: 7.2rem 0 8rem;
 }
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 5.2rem 0 6rem;
+  }
+}
